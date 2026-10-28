@@ -2,6 +2,7 @@
 import hashlib
 import logging
 import os
+from pathlib import Path
 from dataclasses import asdict
 from uuid import uuid4
 
@@ -228,7 +229,6 @@ def ensure_source_mode() -> None:
 
 def sidebar(api_key: str) -> tuple[str, str, str]:
     with st.sidebar:
-        st.markdown("### :material/blur_on: Mass Transfer")
         st.caption("YOUR ENGINEERING STUDY SPACE")
         st.space("small")
         account_controls()
@@ -421,8 +421,6 @@ def chat_page(level: str, topic: str, api_key: str) -> None:
                 st.error("The photo could not be processed. Check access to the configured Groq vision model, or try a smaller, clearer image.")
             else:
                 st.error("The image-reading service is unavailable or has reached its usage limit. Please reattach the file and try again.")
-    st.caption("Attach up to 3 PDFs or photos, 10 MB each. Chat PDFs: up to 50 pages, including at most 5 scanned pages. Photos/scans are sent to Groq for reading; check transcribed formulas and numbers.")
-    st.caption("AI can make mistakes. Check the reference passages and verify important calculations.")
 
 
 def tools_page() -> None:
@@ -497,6 +495,8 @@ def library_page() -> None:
 
 def main() -> None:
     st.set_page_config(page_title="Mass Transfer · Study Assistant", page_icon="◎", layout="wide")
+    assets = Path(__file__).resolve().parent / "assets"
+    st.logo(str(assets / "logo.svg"), icon_image=str(assets / "logo-icon.svg"), size="large")
     initialize()
     api_key = setting("GROQ_API_KEY")
     page, level, topic = sidebar(api_key)
