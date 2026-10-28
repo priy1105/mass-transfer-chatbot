@@ -1,0 +1,7 @@
+streamlit>=1.66.1,<1.67
+groq>=0.29,<1
+pypdf>=5.7,<7
+scikit-learn>=1.7,<2
+python-dotenv>=1.1,<2
+pillow>=11.3,<14
+pypdfium2>=4.30,<6

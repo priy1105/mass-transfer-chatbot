@@ -1,0 +1,25 @@
+# Credentials (configure real keys in Streamlit Secrets when hosted)
+.env
+.env.*
+!.env.example
+# Local environments, caches, and logs
+.venv/
+__pycache__/
+*.py[cod]
+.streamlit/secrets.toml
+.streamlit/secrets.*.toml
+!.streamlit/secrets.toml.example
+.pytest_cache/
+.ruff_cache/
+*.log
+.uv-cache/
+
+# Keep original source PDFs and data/knowledge.json.gz in the repository.
+
+# Unused FAISS database, React interfaces, and old dependency backups
+/vectorstore/
+/frontend/
+/streamlit_component/
+/legacy/
+/Pipfile
+/Pipfile.lock

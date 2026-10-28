@@ -1,0 +1,31 @@
+[theme]
+base = "light"
+primaryColor = "#18796b"
+backgroundColor = "#f7f9f5"
+secondaryBackgroundColor = "#edf2eb"
+textColor = "#183b37"
+font = "DM Sans:https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+headingFont = "Manrope:https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+headingFontSizes = ["3.5rem", "2rem", "1.3rem", "1.1rem", "1rem", "0.9rem"]
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+baseRadius = "0.8rem"
+buttonRadius = "0.6rem"
+borderColor = "#dce5da"
+greenColor = "#52927d"
+greenTextColor = "#387c66"
+showSidebarBorder = true
+paddingTop = "1.5rem"
+paddingBottom = "2rem"
+
+[theme.sidebar]
+backgroundColor = "#edf2eb"
+secondaryBackgroundColor = "#f7f9f5"
+headingFontSizes = ["1.6rem", "1.4rem", "1.2rem", "1rem", "0.9rem", "0.8rem"]
+paddingTop = "1.2rem"
+
+[server]
+headless = true
+maxUploadSize = 10
+
+[browser]
+gatherUsageStats = false

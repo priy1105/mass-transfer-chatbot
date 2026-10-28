@@ -1,0 +1,8 @@
+# Preserve source documents and binary assets exactly on every platform.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gz binary
+*.faiss binary
